@@ -27,11 +27,24 @@ group :development, :test do
   # codestyle
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
+
+  gem "rspec-rails"
 end
 
 group :development do
+  # spring & guard
+  gem "guard-rspec", require: false
   gem "listen", ">= 3.0.5", "< 3.2"
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem "terminal-notifier"
+  gem "terminal-notifier-guard"
+end
+
+group :test do
+  gem "database_cleaner"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "shoulda-matchers"
+  gem "simplecov", require: false
 end
