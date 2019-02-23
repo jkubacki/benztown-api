@@ -12,6 +12,7 @@ ActiveAdmin.register Client do
     selectable_column
     id_column
     column :email
+    column :accepted_invitation?
     actions
   end
 
