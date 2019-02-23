@@ -9,6 +9,8 @@ gem "rails", "~> 5.2.2"
 gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
 gem "puma", "~> 3.11"
+# Reduces boot times through caching; required in config/boot.rb
+gem "bootsnap", ">= 1.1.0", require: false
 
 # ActiveAdmin
 gem "activeadmin"
@@ -16,9 +18,6 @@ gem "devise"
 
 # Elements production upload
 gem "aws-sdk-s3", require: false
-
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", ">= 1.1.0", require: false
 
 # Validations for activestorage types
 gem "activestorage-validator"
