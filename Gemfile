@@ -14,8 +14,14 @@ gem "puma", "~> 3.11"
 gem "activeadmin"
 gem "devise"
 
+# Elements production upload
+gem "aws-sdk-s3", require: false
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
+
+# Validations for activestorage types
+gem "activestorage-validator"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
