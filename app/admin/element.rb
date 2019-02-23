@@ -6,6 +6,12 @@ ActiveAdmin.register Element do
 
   filter :name
   filter :created_at
+  filter(
+    :taggings_tag_name,
+    label: "Tags",
+    as: :check_boxes,
+    collection: -> { ActsAsTaggableOn::Tag.pluck(:name).map { |name| [name, name] } }
+  )
 
   form partial: "form"
 
