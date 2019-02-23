@@ -39,9 +39,9 @@ group :development, :test do
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
 
-  gem "rspec-rails"
-
+  gem "letter_opener"
   gem "pry-rails"
+  gem "rspec-rails"
 end
 
 group :development do
