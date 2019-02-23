@@ -22,7 +22,7 @@ module API
 
     # Unathorized error json response
     def unauthorized_error
-      return_error!(401, message: "Unauthorized")
+      error!("401 Unauthorized", 401)
     end
 
     # Current client
