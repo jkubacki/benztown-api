@@ -12,9 +12,14 @@ gem "puma", "~> 3.11"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
+gem "dry-monads", require: false
+
 # ActiveAdmin
 gem "activeadmin"
+
+# Authentication
 gem "devise"
+gem "devise_invitable"
 
 # Elements production upload
 gem "aws-sdk-s3", require: false
@@ -36,9 +41,9 @@ group :development, :test do
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
 
-  gem "rspec-rails"
-
+  gem "letter_opener"
   gem "pry-rails"
+  gem "rspec-rails"
 end
 
 group :development do
@@ -55,6 +60,7 @@ group :test do
   gem "database_cleaner"
   gem "factory_bot_rails"
   gem "faker"
+  gem "rails-controller-testing"
   gem "shoulda-matchers"
   gem "simplecov", require: false
 end
