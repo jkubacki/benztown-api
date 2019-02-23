@@ -23,8 +23,8 @@ gem "devise_invitable"
 
 # API
 gem "doorkeeper"
+gem "fast_jsonapi"
 gem "grape"
-# gem "fast_jsonapi"
 
 # Elements production upload
 gem "aws-sdk-s3", require: false

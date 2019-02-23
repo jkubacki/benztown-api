@@ -7,7 +7,7 @@ module API
         class Show < Base
           desc "Return the logged in client"
           get do
-            current_client
+            ClientSerializer.new(current_client).serializable_hash
           end
         end
       end
