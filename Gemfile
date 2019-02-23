@@ -14,7 +14,10 @@ gem "bootsnap", ">= 1.1.0", require: false
 
 # ActiveAdmin
 gem "activeadmin"
+
+# Authentication
 gem "devise"
+gem "devise_invitable"
 
 # Elements production upload
 gem "aws-sdk-s3", require: false
