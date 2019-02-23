@@ -23,7 +23,7 @@ gem "devise_invitable"
 
 # API
 gem "doorkeeper"
-# gem "grape"
+gem "grape"
 # gem "fast_jsonapi"
 
 # Elements production upload
