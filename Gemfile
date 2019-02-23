@@ -21,6 +21,11 @@ gem "activeadmin"
 gem "devise"
 gem "devise_invitable"
 
+# API
+gem "doorkeeper"
+# gem "grape"
+# gem "fast_jsonapi"
+
 # Elements production upload
 gem "aws-sdk-s3", require: false
 
