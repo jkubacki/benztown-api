@@ -11,6 +11,7 @@ module API
       content_type :json, "application/vnd.api+json"
 
       mount Clients::Base
+      mount Elements::Base
     end
   end
 end
