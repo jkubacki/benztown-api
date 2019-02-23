@@ -29,6 +29,8 @@ group :development, :test do
   gem "rubocop-rspec", require: false
 
   gem "rspec-rails"
+
+  gem "pry-rails"
 end
 
 group :development do
