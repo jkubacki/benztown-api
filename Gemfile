@@ -11,8 +11,8 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
 
 # ActiveAdmin
-gem 'devise'
-gem 'activeadmin'
+gem "activeadmin"
+gem "devise"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
