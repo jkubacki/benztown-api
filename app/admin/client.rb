@@ -21,4 +21,17 @@ ActiveAdmin.register Client do
     end
     f.actions
   end
+
+  controller do
+    def create
+      result = Clients::Invite.call(email: params["client"]["email"])
+      if result.success?
+        redirect_to collection_url, notice: "User #{result.value!.email} invited"
+      else
+        @client = result.failure
+        render action: "edit"
+      end
+    end
+  end
+end
 # rubocop:enable Metrics/BlockLength

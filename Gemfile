@@ -60,6 +60,7 @@ group :test do
   gem "database_cleaner"
   gem "factory_bot_rails"
   gem "faker"
+  gem "rails-controller-testing"
   gem "shoulda-matchers"
   gem "simplecov", require: false
 end
