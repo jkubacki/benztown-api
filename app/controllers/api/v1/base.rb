@@ -12,6 +12,7 @@ module API
 
       mount Clients::Base
       mount Elements::Base
+      mount Invitations::Base
     end
   end
 end
