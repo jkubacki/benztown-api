@@ -267,6 +267,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-env-credentials (0.1.3)
+      rails (>= 5.2.0.rc1)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.2.2)
@@ -394,6 +396,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 5.2.2)
   rails-controller-testing
+  rails-env-credentials
   rspec-rails
   rubocop
   rubocop-rspec

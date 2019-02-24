@@ -50,6 +50,9 @@ group :development, :test do
   gem "letter_opener"
   gem "pry-rails"
   gem "rspec-rails"
+
+  # Proper encrypted credentials per environment. As it will be implemented in Rails 6.
+  gem "rails-env-credentials"
 end
 
 group :development do
