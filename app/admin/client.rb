@@ -25,7 +25,7 @@ ActiveAdmin.register Client do
 
   controller do
     def create
-      result = Clients::Invite.call(email: params["client"]["email"])
+      result = Clients::Invite.call(email: params["client"]["email"], mplc: current_mplc)
       if result.success?
         redirect_to collection_url, notice: "User #{result.value!.email} invited"
       else
