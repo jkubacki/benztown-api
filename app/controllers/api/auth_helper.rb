@@ -41,7 +41,7 @@ module API
     def check_accept_header!
       return if request.headers["Accept"] == "application/vnd.api+json"
 
-      return_error!(415, message: "Unsupported Media Type")
+      error!("415 Unsupported Media Type", 415)
     end
   end
 end
