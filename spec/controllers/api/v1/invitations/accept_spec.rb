@@ -24,20 +24,22 @@ describe API::V1::Invitations::Accept, type: :request do
   end
 
   context "when accept invitation fails" do
-    let(:accept_invitation_result) { Failure(nil) }
+    let(:accept_invitation_result) { Failure("Failure reason") }
 
-    it "returns 422 status" do
+    it "returns 422 status with failure reason" do
       subject
       expect(response.code).to eq "422"
+      expect(response.body).to include "Failure reason"
     end
   end
 
   context "when accept invitation succeeds" do
     let(:accept_invitation_result) { Success(nil) }
 
-    it "returns 204 status" do
+    it "returns 204 status with empty body" do
       subject
       expect(response.code).to eq "204"
+      expect(response.body).to be_empty
     end
   end
 end

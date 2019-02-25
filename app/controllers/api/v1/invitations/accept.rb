@@ -10,8 +10,13 @@ module API
               invitation_token: params[:invitation_token],
               password: params[:password]
             )
-          status result.success? ? 204 : 422
-          nil
+          if result.success?
+            status 204
+            nil
+          else
+            status 422
+            result.failure
+          end
         end
       end
     end
