@@ -5,7 +5,7 @@ require "rails_helper"
 describe API::V1::Invitations::Accept, type: :request do
   include Dry::Monads::Result::Mixin
 
-  subject { put "/api/v1/invitations", headers: headers, params: params }
+  subject { post "/api/v1/invitations", headers: headers, params: params }
 
   let(:params) do
     {
