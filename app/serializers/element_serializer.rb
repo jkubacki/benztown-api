@@ -5,6 +5,6 @@ class ElementSerializer
   attributes :name, :tag_list
 
   attribute :file do |element|
-    Rails.application.routes.url_helpers.rails_blob_path(element.file, only_path: true)
+    Rails.application.routes.url_helpers.polymorphic_url(element.file)
   end
 end
