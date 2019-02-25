@@ -10,4 +10,9 @@ class Element < ApplicationRecord
 
   validates :name, presence: true
   validates :file, presence: true, blob: { content_type: ALLOWED_CONTENT_TYPES }
+
+  searchkick(
+    callbacks: :async,
+    word_middle: [:name, :tags],
+  )
 end
