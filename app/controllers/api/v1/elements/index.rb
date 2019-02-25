@@ -5,7 +5,8 @@ module API
     module Elements
       class Index < Base
         get do
-          elements = Element.all
+          q = params[:q]
+          elements = q.present? ? Element.search(q) : Element.all
           ElementSerializer.new(elements).serializable_hash
         end
       end
