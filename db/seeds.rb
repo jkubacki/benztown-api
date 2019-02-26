@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
-if Rails.env.development?
-  Mplc.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+Mplc.create!(
+  email: Rails.application.credentials.mplc[:email],
+  password: Rails.application.credentials.mplc[:password],
+  password_confirmation: Rails.application.credentials.mplc[:password]
+)
 
+if Rails.env.development?
   tags = ["jingle", "libraries", "voice-over", "imaging", "programming"]
 
   10.times do |i|
