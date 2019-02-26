@@ -6,8 +6,16 @@ module API
       class Index < Base
         get do
           q = params[:q]
-          elements = q.present? ? Element.search(q) : Element.all
-          ElementSerializer.new(elements).serializable_hash
+          elements =
+            if q.present?
+              ids =  Element.search(q).results.map(&:id)
+              Element.where(id: ids)
+            else
+              Element.all
+            end
+          ElementSerializer.new(
+            elements.includes(tags: :taggings, file_attachment: :blob)
+          ).serializable_hash
         end
       end
     end
