@@ -14,7 +14,7 @@ RSpec.describe Clients::InvitationUrl do
   end
 
   context "when invitation token is not empty" do
-    let(:invitation_token) { 'invitation_token' }
+    let(:invitation_token) { "invitation_token" }
 
     it "returns success with confirmation url" do
       expect(subject.value!).to eq(

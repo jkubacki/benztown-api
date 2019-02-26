@@ -11,7 +11,7 @@ class InvitationMailer < ApplicationMailer
     mail(
       to: @client.email,
       from: @mplc.email,
-      subject: "#{@mplc.email} would like to share his library with you",
+      subject: "#{@mplc.email} would like to share his library with you"
     )
   end
 end

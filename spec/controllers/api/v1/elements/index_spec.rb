@@ -56,10 +56,10 @@ describe API::V1::Elements::Index, type: :request do
         response_data = JSON.parse(response.body)["data"]
         expect(response_data.size).to eq 2
 
-        ids = response_data.map { |data| data["id"]  }
+        ids = response_data.map { |data| data["id"] }
         expect(ids).to include(d12.id.to_s)
         expect(ids).to include(eminem.id.to_s)
-        expect(ids).to_not include(mozart.id.to_s)
+        expect(ids).not_to include(mozart.id.to_s)
       end
     end
   end

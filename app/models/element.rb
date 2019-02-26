@@ -13,6 +13,6 @@ class Element < ApplicationRecord
 
   searchkick(
     callbacks: :async,
-    word_middle: [:name, :tags],
+    word_middle: %i[name tags]
   )
 end
