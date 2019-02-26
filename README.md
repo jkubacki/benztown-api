@@ -1,6 +1,6 @@
 # README
 
-This is admin and API part of Benztown app - audio elements manager for music​ ​production library company.
+This is admin and API part of Benztown app - https://github.com/jkubacki/benztown
 
 ## Prerequisites
 You will need the following things properly installed on your computer:
@@ -21,6 +21,9 @@ For search:
 * `rails s`
 * http://localhost:3000
 
+## Tests
+`rspec`
+
 ## Features
 
 By default seeds will create default mplc user from development credentials.
@@ -40,15 +43,3 @@ Clients
 * index with information whether user accepted the invitation
 * search (by email)
 * delete
-
-## Info & Disclaimers
-
-I decided to add extra feature of inviting clients, sending invitation email and confirming account on the frontend.
-It's out of MVP. Wouldn't implement it if I had a fixed time budget. But it nicely shows the way I write my services.
-
-I intentionally included encryption keys for development and tests so I don't have to share them with you.
-There are no sensitive data inside. If there were (e.g. development api secret key) I wouldn't share it.
-
-It would be nice to have pagination on the backend and frontend. But that's another out of MVP feature.
-
-In production setting I would setup a proxy from frontend to pass requests to the backend for admin panel
