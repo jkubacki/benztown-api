@@ -21,8 +21,12 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/config/master-development.key
-/config/master-test.key
+
+# Add .key for development and test to repository. For easier demonstration purposes.
+# There are no sensitive data inside.
+
+# /config/master-development.key
+# /config/master-test.key
 
 # Test coverage
 /coverage
