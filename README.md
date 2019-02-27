@@ -15,7 +15,6 @@ For search:
 ## Installation & running
 
 * `gem install bundler` - install package manager for ruby
-* `touch config/secrets.yml.key` and paste into it the encryption key located in Jaacoo vault as `Secrets encryption key`
 * `bundle install` - install all ruby gems
 * `rake db:create db:setup` - create database, insert tables, add simple data
 * `rails s`
