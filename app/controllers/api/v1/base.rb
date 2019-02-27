@@ -10,7 +10,6 @@ module API
       format :json
       content_type :json, "application/vnd.api+json"
 
-      mount Clients::Base
       mount Elements::Base
       mount Invitations::Base
     end
