@@ -4,6 +4,11 @@ module API
   module V1
     module Invitations
       class Accept < Base
+        params do
+          requires :invitation_token, type: String
+          requires :password, type: String
+        end
+
         post do
           result =
             ::Clients::AcceptInvitation.call(

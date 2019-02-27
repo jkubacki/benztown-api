@@ -4,6 +4,10 @@ module API
   module V1
     module Elements
       class Index < Base
+        params do
+          optional :q, type: String
+        end
+
         get do
           q = params[:q]
           elements =
